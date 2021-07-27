@@ -1,13 +1,13 @@
-name: Test My Game :)
+name: Test My Game 
 
-on:[push]
-
+on: [push]
 jobs:
   TestRunner:
-    steps: 
-	- uses: game-ci/unity-test-runner@v2
-  	  env:
-    	    UNITY_LICENSE: ${{ secrets.UNITY_LICENSE }}
-  	  with:
-    	    projectPath: path/to/your/project
-    	    githubToken: ${{ secrets.GITHUB_TOKEN }} 
+      runs-on: ubuntu-latest
+      steps: 
+      - uses: game-ci/unity-test-runner@v2
+        env:
+          UNITY_LICENSE: ${{ secrets.UNITY_LICENSE }}
+        with:
+          projectPath: path/to/your/project
+          githubToken: ${{ secrets.GITHUB_TOKEN }}
