@@ -4,7 +4,6 @@ on:[push]
 
 jobs:
   TestRunner:
-    name: Unity - Test runner
     steps: 
 	- uses: game-ci/unity-test-runner@v2
   	  env:
