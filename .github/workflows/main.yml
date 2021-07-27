@@ -14,5 +14,5 @@ jobs:
         env:
           UNITY_LICENSE: ${{ secrets.UNITY_LICENSE }}
         with:
-          projectPath: C:\Users\Mason\Desktop\Crashteroids\CrashteroidsStarter
+          projectPath: ./
           githubToken: ${{ secrets.GITHUB_TOKEN }}
