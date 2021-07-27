@@ -1,14 +1,15 @@
-name: Test My Game
+name: Actions 😎
 
-on:[push]
+on: [push, pull_request]
 
 jobs:
-  TestRunner:
-    name: Unity - Test runner
-    steps: 
-	- uses: game-ci/unity-test-runner@v2
-  	  env:
-    	    UNITY_LICENSE: ${{ secrets.UNITY_LICENSE }}
-  	  with:
-    	    projectPath: C:\Users\Mason\Desktop\Crashteroids\Crashteroids Starter
-    	    githubToken: ${{ secrets.GITHUB_TOKEN }} 
+  build:
+    name: Test My Project
+    runs-on: ubuntu-latest
+    steps:
+      - uses: game-ci/unity-test-runner@v2
+        env:
+          UNITY_LICENSE: ${{ secrets.UNITY_LICENSE }}
+        with:
+		  projectPath: PATHHERE
+          githubToken: ${{ secrets.GITHUB_TOKEN }}
