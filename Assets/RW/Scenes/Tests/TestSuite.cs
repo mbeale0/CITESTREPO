@@ -28,7 +28,7 @@ public class TestSuite
         
         yield return new WaitForSeconds(0.1f);
 
-        Assert.Greater(ship.transform.position.x, initXPos);
+        Assert.Less(ship.transform.position.x, initXPos);
     }
     [UnityTest]
     public IEnumerator ShipMovesRight()
@@ -49,7 +49,7 @@ public class TestSuite
         float initialYPos = asteroid.transform.position.y;
         yield return new WaitForSeconds(0.1f);
 
-        Assert.Less(asteroid.transform.position.y, initialYPos);
+        Assert.Greater(asteroid.transform.position.y, initialYPos);
     }
     [UnityTest]
     public IEnumerator GameOverOccursOnAsteroidCollision()
