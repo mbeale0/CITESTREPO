@@ -1,13 +1,12 @@
-name: Actions :)
+name: Test My Game :)
 
-on: [push, pull_request]
+on:[push]
 
 jobs:
-    build:
-	name: Build my project
-	runs-on: ubuntu-latest
-	steps:  
-	- uses: game-ci/unity-test-runner@v2.0
+  TestRunner:
+    name: Unity - Test runner
+    steps: 
+	- uses: game-ci/unity-test-runner@v2
   	  env:
     	    UNITY_LICENSE: ${{ secrets.UNITY_LICENSE }}
   	  with:
