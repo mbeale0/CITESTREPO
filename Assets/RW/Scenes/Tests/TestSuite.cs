@@ -28,7 +28,7 @@ public class TestSuite
         
         yield return new WaitForSeconds(0.1f);
 
-        Assert.Greater(ship.transform.position.x, initXPos);
+        Assert.Less(ship.transform.position.x, initXPos);
     }
     [UnityTest]
     public IEnumerator ShipMovesRight()
