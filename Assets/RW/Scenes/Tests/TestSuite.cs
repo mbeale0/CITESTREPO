@@ -39,7 +39,7 @@ public class TestSuite
 
         yield return new WaitForSeconds(0.1f);
 
-        Assert.Greater(ship.transform.position.x, initXPos);
+        Assert.Less(ship.transform.position.x, initXPos);
     }
     [UnityTest]
     public IEnumerator AsteroidsMoveDown()
@@ -77,7 +77,7 @@ public class TestSuite
         //makes sure score is not 0
         game.SetScore(20);
         game.NewGame();
-        Assert.AreEqual(game.GetScore(), 0);
+        Assert.AreEqual(game.GetScore(), 1);
         yield return null;
     }
     [UnityTest]
